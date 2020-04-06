@@ -23,8 +23,8 @@ public class SparkWebApp {
         port(getPort());
         
         //API: secure(keystoreFilePath, keystorePassword, truststoreFilePath,truststorePassword);
-        secure("target/test-classes/ecikeystore.p12", "juanjuan", null, null);     
-        get("/hello", (req, res) -> "Hello World");
+        secure("keystores/eciBrowser.p12", "arepbrowser", null, null);
+        get("/hello", (req, res) -> "Hello WebSecuriryApp");
     }
     
     static int getPort() {
